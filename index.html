@@ -26,12 +26,18 @@
     <script>
         var dropdown = Dropdown('dropdown', {
             items: [
-                ['<b>Item 1</b>', function() {console.log('Function 1')}],
-                ['<i><a href="https://e.mail.ru/" target="_blank">Item 2</a></i>', function() {console.log('Function 2')}],
-                ['Item 3'],
-                ['Item 4', function() {console.log('Function 4')}]
+                ['Item 1', function() {console.log('Function 1')}],
+                ['Item 2', function() {console.log('Function 2')}],
+                ['<b>Item 3</b>', function() {console.log('Function 3')}],
+                ['<i><a href="https://e.mail.ru/" target="_blank">Item 4</a></i>']
             ],
-            event: 'hover'
+            event: 'click',
+            onOpen: function() {
+                console.log('Dropdown war opened')
+            },
+            onClose: function() {
+                console.log('Dropdown war closed')
+            }
         })
 
 

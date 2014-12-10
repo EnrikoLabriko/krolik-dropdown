@@ -5,9 +5,11 @@ var Dropdown = function (id, options) {
         //console.log('getComputedStyle(ul).display:', getComputedStyle(ul).display);
         if (getComputedStyle(ul).display == 'none') {
             ul.style.display = 'block';
+            options.onOpen()
             //console.log('aaa');
         } else {
             ul.style.display = 'none';
+            options.onClose()
             //console.log('bbb');
         }
     };
