@@ -30,11 +30,11 @@
     /*background: #666;*/
 /*}*/
 
-/*.dd li[disabled] {*/
-    /*color: #ccc;*/
-    /*cursor: text;*/
-    /*background: none;*/
-/*}*/
+.dd li[disabled] {
+    color: #ccc;
+    cursor: text;
+    background: none;
+}
 
 .dd li.dropdown-selected {
     color: #fff;

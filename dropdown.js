@@ -24,8 +24,8 @@ var Dropdown = function (id, options) {
         var index = [].indexOf.call(node.parentNode.children, node);
         //console.log('index: ', index);
         //console.log(options.items[index][1])
-        if (options.items[index][1]) {
-            options.items[index][1]()
+        if (options.items[index]) {
+            options.items[index]()
         }
         if (node.classList.contains('dropdown-selected')) {
             node.classList.remove('dropdown-selected')
@@ -47,10 +47,13 @@ var Dropdown = function (id, options) {
     }
     //console.log(options.items.length);
     for (i = 0; i < options.items.length; i++) {
-        var li = document.createElement('li');
-        li.innerHTML = options.items[i][0];
-        ul.appendChild(li);
-        li.addEventListener('click', dropdownItemClick, false)
+        //var li = document.createElement('li');
+        //ul.appendChild(li);
+        //console.log(ul.children)
+        console.log(ul.children[i].getAttribute('disabled'))
+        if (ul.children[i].getAttribute('disabled') === null) {
+            ul.children[i].addEventListener('click', dropdownItemClick, false)
+        }
     }
 
 };
