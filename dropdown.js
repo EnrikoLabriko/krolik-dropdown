@@ -14,10 +14,11 @@ var Dropdown = function (id, options) {
 
     var dropdownItemClick = function(event) {
         event.stopPropagation();
-        if (event.target.classList.contains('dropdown-selected')) {
-            event.target.classList.remove('dropdown-selected')
+        console.log(event.currentTarget);
+        if (event.currentTarget.classList.contains('dropdown-selected')) {
+            event.currentTarget.classList.remove('dropdown-selected')
         } else {
-            event.target.classList.add('dropdown-selected')
+            event.currentTarget.classList.add('dropdown-selected')
         }
     };
 
@@ -28,7 +29,7 @@ var Dropdown = function (id, options) {
     //console.log(options.items.length);
     for (i = 0; i < options.items.length; i++) {
         var li = document.createElement('li');
-        li.innerText = options.items[i];
+        li.innerHTML = options.items[i][0];
         ul.appendChild(li);
         li.addEventListener('click', dropdownItemClick, false)
     }

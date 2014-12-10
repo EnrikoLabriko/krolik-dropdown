@@ -25,7 +25,12 @@
 
     <script>
         var dropdown = Dropdown('dropdown', {
-            items: ['Item 1', 'Item 2', 'Item 3', 'Item 4']
+            items: [
+                ['<b>Item 1</b>', function() {console.log('Function 1')}],
+                ['<i><a href="https://e.mail.ru/" target="_blank">Item 2</a></i>'],
+                ['Item 3', function() {console.log('Function 3')}],
+                ['Item 4', function() {console.log('Function 4')}]
+            ]
         })
 
 
