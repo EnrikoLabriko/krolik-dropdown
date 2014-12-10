@@ -36,7 +36,13 @@ var Dropdown = function (id, options) {
     var div = document.getElementById(id);
     var ul = div.getElementsByTagName('ul')[0];
     var innerDiv = div.getElementsByTagName('div')[0];
-    innerDiv.addEventListener('click', dropdownToggleOpen, false);
+    if (options.event == 'click') {
+        innerDiv.addEventListener('click', dropdownToggleOpen, false);
+    } else if (options.event == 'hover') {
+        innerDiv.addEventListener('mouseover', dropdownToggleOpen, false);
+        innerDiv.addEventListener('mouseout', dropdownToggleOpen, false);
+
+    }
     //console.log(options.items.length);
     for (i = 0; i < options.items.length; i++) {
         var li = document.createElement('li');
