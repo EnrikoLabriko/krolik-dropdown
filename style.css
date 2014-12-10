@@ -36,12 +36,18 @@
 
 
 
-#dropdown-header {
+#dropdown {
     margin-top: 150px;
     box-shadow: 0 0 0 1px;
     width: 100px;
 }
 
-    #dropdown-header ul {
+    #dropdown ul {
         display: none;
     }
+
+    #dropdown li.dropdown-selected {
+        background: #ccc;
+        color: green;
+    }
+
