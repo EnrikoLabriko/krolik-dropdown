@@ -21,15 +21,17 @@
     <div id="dropdown-header">
         Fruits
         <ul>
-            <li class="item1"><a href="">Item 1</a></li>
-            <li class="item2"><a href="">Item 2</a></li>
-            <li class="item3"><a href="">Item 3</a></li>
-            <li class="item4"><a href="">Item 4</a></li>
+            <!--<li class="item1"><a href="">GovnoItem 1</a></li>-->
+            <!--<li class="item2"><a href="">GovnoItem 2</a></li>-->
+            <!--<li class="item3"><a href="">GovnoItem 3</a></li>-->
+            <!--<li class="item4"><a href="">GovnoItem 4</a></li>-->
         </ul>
     </div>
 
     <script>
-        var dropdown = Dropdown('dropdown-header')
+        var dropdown = Dropdown('dropdown-header', {
+            items: ['Item 1', 'Item 2', 'Item 3', 'Item 4']
+        })
 
 
     </script>
