@@ -14,18 +14,29 @@ var Dropdown = function (id, options) {
 
     var dropdownItemClick = function(event) {
         event.stopPropagation();
-        console.log(event.currentTarget);
-        if (event.currentTarget.classList.contains('dropdown-selected')) {
-            event.currentTarget.classList.remove('dropdown-selected')
+        //console.log(event.currentTarget);
+        var node = event.currentTarget;
+        // We'd like to do something like this:
+        //     var index = node.parentNode.children.indexOf(node);
+        // But NodeList doesn't support indexOf() method ¯\_(ツ)_/¯
+        var index = [].indexOf.call(node.parentNode.children, node);
+        //console.log('index: ', index);
+        //console.log(options.items[index][1])
+        if (options.items[index][1]) {
+            options.items[index][1]()
+        }
+        if (node.classList.contains('dropdown-selected')) {
+            node.classList.remove('dropdown-selected')
         } else {
-            event.currentTarget.classList.add('dropdown-selected')
+            node.classList.add('dropdown-selected')
         }
     };
 
-    var newDiv = document.createElement('div');
+    //var newDiv = document.createElement('div');
     var div = document.getElementById(id);
     var ul = div.getElementsByTagName('ul')[0];
-    div.addEventListener('click', dropdownToggleOpen, false);
+    var innerDiv = div.getElementsByTagName('div')[0];
+    innerDiv.addEventListener('click', dropdownToggleOpen, false);
     //console.log(options.items.length);
     for (i = 0; i < options.items.length; i++) {
         var li = document.createElement('li');

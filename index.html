@@ -8,27 +8,27 @@
 </head>
 <body>
 
-    <div class="dd expanded">
+    <div class="dd expanded" id="dropdown">
         <div>Menu</div>
         <ul>
-            <li>item 1</li>
-            <li disabled="true">item 2</li>
-            <li><b>item 3</b></li>
-            <li><i><a href="https://e.mail.ru/" target="_blank">item 4</a></i></li>
+            <!--<li data-index="0">item 1</li>-->
+            <!--<li data-index="1" disabled="true">item 2</li>-->
+            <!--<li><b>item 3</b></li>-->
+            <!--<li><i><a href="https://e.mail.ru/" target="_blank">item 4</a></i></li>-->
         </ul>
     </div>
 
-    <div id="dropdown"> Fruits
-        <ul>
-        </ul>
-    </div>
+    <!--<div id="dropdown"> Fruits-->
+        <!--<ul>-->
+        <!--</ul>-->
+    <!--</div>-->
 
     <script>
         var dropdown = Dropdown('dropdown', {
             items: [
                 ['<b>Item 1</b>', function() {console.log('Function 1')}],
-                ['<i><a href="https://e.mail.ru/" target="_blank">Item 2</a></i>'],
-                ['Item 3', function() {console.log('Function 3')}],
+                ['<i><a href="https://e.mail.ru/" target="_blank">Item 2</a></i>', function() {console.log('Function 2')}],
+                ['Item 3'],
                 ['Item 4', function() {console.log('Function 4')}]
             ]
         })

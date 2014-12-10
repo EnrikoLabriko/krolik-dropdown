@@ -23,31 +23,36 @@
     cursor: pointer;
     padding: 5px 20px;
 }
-.dd li:hover {
+
+/*.dd li:hover {*/
+    /*color: #fff;*/
+    /*background: #666;*/
+/*}*/
+
+/*.dd li[disabled] {*/
+    /*color: #ccc;*/
+    /*cursor: text;*/
+    /*background: none;*/
+/*}*/
+
+.dd li.dropdown-selected {
     color: #fff;
     background: #666;
 }
 
-.dd li[disabled] {
-    color: #ccc;
-    cursor: text;
-    background: none;
-}
+/*#dropdown {*/
+    /*margin-top: 150px;*/
+    /*box-shadow: 0 0 0 1px;*/
+    /*width: 100px;*/
+/*}*/
 
+    /*#dropdown ul {*/
+        /*display: none;*/
+        /*list-style: none;*/
+    /*}*/
 
-
-#dropdown {
-    margin-top: 150px;
-    box-shadow: 0 0 0 1px;
-    width: 100px;
-}
-
-    #dropdown ul {
-        display: none;
-    }
-
-    #dropdown li.dropdown-selected {
-        background: #ccc;
-        color: green;
-    }
+    /*#dropdown li.dropdown-selected {*/
+        /*background: #ccc;*/
+        /*color: green;*/
+    /*}*/
 
