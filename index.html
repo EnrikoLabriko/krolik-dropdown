@@ -9,7 +9,7 @@
 <body>
 <!--Судя по всему, запись disabled="true" невалидна, во всяком случае это утверждает-->
 <!--note в спецификации https://html.spec.whatwg.org/#boolean-attribute-->
-    <div class="dd expanded" id="dropdown">
+    <div class="dropdown expanded" id="dropdown-click">
         <div>Menu</div>
         <ul>
             <li>Item 1</li>
@@ -19,13 +19,22 @@
         </ul>
     </div>
 
+<div class="dropdown expanded" id="dropdown-hover">
+    <div>Menu</div>
+    <ul>
+        <li>Item 1</li>
+        <li disabled>Item 2</li>
+        <li><b>Item 3</b></li>
+        <li><i><a href="https://e.mail.ru/" target="_blank">Item 4</a></i></li>
+    </ul>
+</div>
     <!--<div id="dropdown"> Fruits-->
         <!--<ul>-->
         <!--</ul>-->
     <!--</div>-->
 
     <script>
-        var dropdown = Dropdown('dropdown', {
+        var dropdown = Dropdown('dropdown-click', {
             items: [
                 function() {console.log('Function 1')},
                 function() {console.log('Function 2')},
@@ -41,7 +50,21 @@
             }
         })
 
-
+        var dropdown = Dropdown('dropdown-hover', {
+            items: [
+                function() {console.log('Function 1')},
+                function() {console.log('Function 2')},
+                function() {console.log('Function 3')},
+                null
+            ],
+            event: 'hover',
+            onOpen: function() {
+                console.log('Dropdown war opened')
+            },
+            onClose: function() {
+                console.log('Dropdown war closed')
+            }
+        })
     </script>
 
 </body>

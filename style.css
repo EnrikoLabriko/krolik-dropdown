@@ -1,18 +1,18 @@
-.dd {
+.dropdown {
     display: inline-block;
 }
-.dd div {
+.dropdown div {
     cursor: pointer;
     padding: 5px 10px;
     background: #ccc;
 
 }
-.dd.expanded div {
+.dropdown.expanded div {
     color: #fff;
     background: #333;
 }
 
-.dd ul {
+.dropdown ul {
     margin: 0;
     padding: 0;
     position: absolute;
@@ -20,25 +20,29 @@
     list-style: none;
     display: none;
 }
-.dd li {
+.dropdown li {
     cursor: pointer;
     padding: 5px 20px;
 }
 
-/*.dd li:hover {*/
+/*.dropdown li:hover {*/
     /*color: #fff;*/
     /*background: #666;*/
 /*}*/
 
-.dd li[disabled] {
+.dropdown li[disabled] {
     color: #ccc;
     cursor: text;
     background: none;
 }
 
-.dd li.dropdown-selected {
+.dropdown li.dropdown-selected {
     color: #fff;
     background: #666;
+}
+
+#dropdown-hover {
+    margin-left: 100px;
 }
 
 /*#dropdown {*/
